@@ -2,9 +2,9 @@ import { FaLinkedin, FaGithub, FaDiscord, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const socials = [
-  { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/harsh3239/" },
+  { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/disha-gandhi-619a12229/" },
   { icon: <FaGithub />, path: "https://github.com/Kieseatic" },
-  { icon: <FaEnvelope />, path: "mailto:harshdugar1234@gmail.com" },
+  { icon: <FaEnvelope />, path: "mailto:dishamgandhi.30@gmail.com" },
 ];
 
 const Social = () => (

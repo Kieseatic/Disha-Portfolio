@@ -8,9 +8,12 @@
 
 @layer base {
   body {
-    @apply font-primary bg-[#d9b99b] text-white;
+    @apply font-primary bg-[#1b3440] text-white;
   }
 
+  header {
+    font-family: 'Delius', cursive; /* For Poppins */
+  }
   /* Typography */
   .h1 {
     @apply text-[36px] xl:text-[40px] font-extrabold uppercase leading-tight;

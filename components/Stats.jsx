@@ -12,12 +12,16 @@ const stats = [
     text: "Technologies mastered",
   },
   {
-    num: 6,
-    text: "Projects completed",
+    num: 4,
+    text: "Case-Studies Completed",
   },
   {
-    num: 115,
-    text: "Code commits",
+    num: 6,
+    text: "Brands collaborated with",
+  },
+  {
+    num: 5000,
+    text: "Followers gained",
   },
 ];
 

@@ -34,10 +34,10 @@ const Home = () => {
               whileInView={"show"}
               viewport={{ once: false, amount: 0.2 }}
             >
-              <h1 className="h1">
+              <h1 className="h1 text-[#F4D03F]">
                 Hello!
                 <br />
-                I'm <span className="text-accent">Harsh</span>
+                I'm <span className="text-accent">Disha</span>
               </h1>
             </motion.div>
             {/* bio */}
@@ -49,11 +49,11 @@ const Home = () => {
               className="p text-white/80"
             >
               <p>
-                A versatile software developer who doesn’t just write code, 
-                but crafts intelligent, scalable solutions that bring ideas 
-                to life—on the web, on the server, or anywhere technology 
-                can make an impact. I’m driven by a passion for solving 
-                real-world problems through clean, creative code.
+                A dynamic marketing professional with a knack for crafting
+                impactful social media strategies and driving brand growth. Whether it's amplifying brand visibility,
+                optimizing content for maximum reach, or leveraging the latest
+                trends in digital marketing, I bring creativity and strategy to
+                the table. 
               </p>
             </motion.div>
             {/* take action */}
@@ -64,8 +64,7 @@ const Home = () => {
               viewport={{ once: false, amount: 0.2 }}
               className="h3 leading-normal"
             >
-              Ready to innovate and transform ideas into impactful solutions? 
-
+              Ready to transform ideas into impactful marketing solutions?
             </motion.h3>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center justify-center xl:items-center xl:justify-start gap-6 pt-2">
@@ -74,9 +73,9 @@ const Home = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.2 }}
-                href="/assets/Harsh-Dugar-Resume.pdf"
+                href="/assets/Disha-Gandhi-Resume.pdf"
                 download
-                aria-label="Download Harsh's CV"
+                aria-label="Download Disha's CV"
               >
                 <Button
                   variant="outline"

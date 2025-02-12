@@ -22,6 +22,14 @@ module.exports = {
     fontFamily: {
       primary: "var(--font-jetbrainsMono)",
       secondary: "var(--font-roboto)",
+      recoleta: ['Recoleta', 'sans-serif'],
+      copper:['Copper-Black'],
+      delius:['Delius'],
+      montserrat:['Montserrat'],
+      poppins:['Poppins'],
+      roboto:['Roboto'],
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
     },
     extend: {
       colors: {
