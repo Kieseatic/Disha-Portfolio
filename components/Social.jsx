@@ -1,9 +1,9 @@
-import { FaLinkedin, FaGithub, FaDiscord, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaDiscord, FaEnvelope, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const socials = [
   { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/disha-gandhi-619a12229/" },
-  { icon: <FaGithub />, path: "https://github.com/Kieseatic" },
+  { icon: <FaInstagram />, path: "https://www.instagram.com/disha._gandhi/" },
   { icon: <FaEnvelope />, path: "mailto:dishamgandhi.30@gmail.com" },
 ];
 

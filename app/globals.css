@@ -8,11 +8,11 @@
 
 @layer base {
   body {
-    @apply font-primary bg-[#1b3440] text-white;
+    @apply font-primary bg-[#6C5E4F] text-white;
   }
 
   header {
-    font-family: 'Delius', cursive; /* For Poppins */
+    font-family: 'Milan'; /* For Poppins */
   }
   /* Typography */
   .h1 {

@@ -30,6 +30,7 @@ module.exports = {
       roboto:['Roboto'],
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
+      milan: ['Milan'],
     },
     extend: {
       colors: {

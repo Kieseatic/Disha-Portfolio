@@ -5,32 +5,19 @@ import { motion } from "framer-motion";
 // Use these imports instead of importing from "@/node_modules/react-icons/fa"
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { AiOutlineRobot } from "react-icons/ai";
+import { FaWordpress, FaFigma, FaMailchimp, FaMicrosoft } from "react-icons/fa";
+import { SiOpenai, SiAdobephotoshop, SiCanva, SiGoogleanalytics, SiTableau, SiHubspot, SiAdobeillustrator, SiMicrosoft } from "react-icons/si";
 
-import {
-  FaReact,
-  FaNodeJs,
-  FaJava,
-  FaPython,
-  FaAws,
-  FaFlask,
-} from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiNextdotjs,
-  SiExpress,
-  SiPostgresql,
-  SiOpenai,
-} from "react-icons/si";
 
 // components
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ScrollArea } from "../../components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "../../components/ui/tooltip";
 
 // about data (unchanged)
 const about = {
@@ -69,20 +56,20 @@ const about = {
 const skills = {
   title: "My skills",
   description:
-    "Driven by curiosity and perseverance, I'm a dedicated software developer who thrives on turning innovative ideas into real-world solutions. From crafting intuitive interfaces to architecting robust systems, I believe in the power of technology to empower users and spark positive change. Let’s innovate together—shaping the future, one line of code at a time.",
+    "Driven by curiosity and perseverance, I'm a dedicated software developer who thrives on turning innovative ideas into real-world solutions. From crafting intuitive interfaces to architecting robust systems, I believe in the power of technology to empower users and spark positive change. Let's innovate together—shaping the future, one line of code at a time.",
   skillList: [
-    { icon: <FaJava />, name: "Java", proficiency: 80 },
-    { icon: <FaPython />, name: "Python", proficiency: 70 },
+    { icon: <FaWordpress />, name: "WordPress", proficiency: 80 },
     { icon: <SiOpenai />, name: "OpenAI", proficiency: 65 },
     { icon: <GiArtificialIntelligence />, name: "AI", proficiency: 75 },
-    { icon: <FaAws />, name: "AWS", proficiency: 60 },
-    { icon: <FaFlask />, name: "Flask", proficiency: 50 },
-    { icon: <FaReact />, name: "React.js", proficiency: 90 },
-    { icon: <SiNextdotjs />, name: "Next.js", proficiency: 85 },
-    { icon: <SiTailwindcss />, name: "TailwindCSS", proficiency: 80 },
-    { icon: <FaNodeJs />, name: "Node.js", proficiency: 75 },
-    { icon: <SiExpress />, name: "Express.js", proficiency: 70 },
-    { icon: <SiPostgresql />, name: "PostgreSQL", proficiency: 60 },
+    { icon: <SiAdobephotoshop />, name: "Photoshop", proficiency: 70 },
+    { icon: <SiCanva />, name: "Canva", proficiency: 85 },
+    { icon: <SiGoogleanalytics />, name: "Google Analytics", proficiency: 75 },
+    { icon: <SiTableau />, name: "Tableau", proficiency: 80 },
+    { icon: <FaFigma />, name: "Figma", proficiency: 65 },
+    { icon: <SiMicrosoft />, name: "Microsoft Office", proficiency: 90 },
+    { icon: <SiHubspot />, name: "HubSpot", proficiency: 70 },
+    { icon: <FaMailchimp />, name: "Mailchimp", proficiency: 75 },
+    { icon: <SiAdobeillustrator />, name: "Illustrator", proficiency: 60 },
   ],
 };
 // experience data (unchanged)

@@ -2,13 +2,13 @@
 
 import { FiDownload } from "react-icons/fi";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/lib/variants";
+import { fadeIn } from "../lib/variants";
 
 // components
-import { Button } from "@/components/ui/button";
-import Social from "@/components/Social";
-import Photo from "@/components/Photo";
-import Stats from "@/components/Stats";
+import { Button } from "../components/ui/button";
+import Social from "../components/Social";
+import Photo from "../components/Photo";
+import Stats from "../components/Stats";
 
 const Home = () => {
   return (
@@ -34,7 +34,7 @@ const Home = () => {
               whileInView={"show"}
               viewport={{ once: false, amount: 0.2 }}
             >
-              <h1 className="h1 text-[#F4D03F]">
+              <h1 className="h1  text-[#ffc95f]">
                 Hello!
                 <br />
                 I'm <span className="text-accent">Disha</span>
@@ -49,11 +49,13 @@ const Home = () => {
               className="p text-white/80"
             >
               <p>
-                A dynamic marketing professional with a knack for crafting
-                impactful social media strategies and driving brand growth. Whether it's amplifying brand visibility,
-                optimizing content for maximum reach, or leveraging the latest
-                trends in digital marketing, I bring creativity and strategy to
-                the table. 
+                A Marketing & Communications Specialist with expertise in 
+                <span className="font-extrabold"> digital marketing, content creation, and brand management. </span>
+                Professional experience in social media strategy, eCommerce, and
+                analytics, driving engagement and brand growth. Skilled in <span className="font-extrabold">
+                Google Analytics, SEO, and cross-channel campaigns. 
+                </span> Passionate
+                about creating impactful marketing solutions.
               </p>
             </motion.div>
             {/* take action */}

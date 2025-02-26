@@ -1,60 +1,61 @@
 "use client";
 
+
 import CountUp from "react-countup";
 
 const stats = [
   {
     num: 2,
     text: "Years of experience",
+    addPlus:true,
   },
   {
     num: 8,
     text: "Technologies mastered",
   },
   {
-    num: 4,
-    text: "Case-Studies Completed",
-  },
-  {
     num: 6,
-    text: "Brands collaborated with",
+    text: "Brands collaborations",
   },
   {
     num: 5000,
     text: "Followers gained",
+    addPlus: true, // Add a flag for this specific stat
   },
 ];
 
 const Stats = () => {
   return (
     <section className="pt-8 xl:pt-12">
-      <div className="container mx-auto">
-        <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
-          {stats.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="flex-1 flex gap-4 items-center justify-center"
-              >
+    <div className="container mx-auto">
+      <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
+        {stats.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className="flex-1 flex gap-4 items-center justify-center"
+            >
+              <div className="text-4xl xl:text-6xl font-extrabold">
                 <CountUp
                   end={item.num}
                   duration={5}
                   delay={2}
-                  className="text-4xl xl:text-6xl font-extrabold"
                 />
-                <p
-                  className={`${
-                    item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
-                  } leading-snug text-white/80`}
-                >
-                  {item.text}
-                </p>
+                {item.addPlus && "+"} {/* Add "+" if the flag is true */}
               </div>
-            );
-          })}
-        </div>
+              <p
+                className={`${
+                  item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
+                } leading-snug text-white/80`}
+              >
+                {item.text}
+              </p>
+            </div>
+          );
+        })}
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 

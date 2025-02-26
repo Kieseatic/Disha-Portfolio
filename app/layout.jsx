@@ -2,8 +2,8 @@ import { JetBrains_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 
 // components
-import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
+import Header from "../components/Header";
+import PageTransition from "../components/PageTransition";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -18,9 +18,9 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Harsh Dugar - Developer Portfolio",
+  title: "Disha Gandhi - Portfolio",
   description:
-    "Explore the portfolio of Harsh Dugar, a Software developer showcasing his projects and expertise.",
+    "Explore the portfolio of Disha Gandhi, a Marketing professional and digital marketing enthusiast. Discover her skills, projects and expertise.",
 };
 
 export default function RootLayout({ children }) {

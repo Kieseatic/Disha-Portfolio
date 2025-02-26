@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // Define the base directory
+    "jsx": "react", // Set JSX compilation option
     "paths": {
-      "@/*": ["./*"]
+      "@/lib/*": ["lib/*"], // Aliases for your `lib` directory
+      "@/components/*": ["components/*"], // Aliases for your `components` directory
+      "@/pages/*": ["pages/*"] // Optional alias for pages
     }
   }
 }
