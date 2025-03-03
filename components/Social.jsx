@@ -16,7 +16,7 @@ const Social = () => (
         href={item.path}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-12 h-12 border border-accent rounded-full flex items-center justify-center text-accent text-xl hover:bg-accent hover:text-primary transition-all duration-500"
+        className="w-12 h-12 border border-[#ffc95f] rounded-full flex items-center justify-center text-[#ffc95f] text-xl hover:bg-[#ffc95f] hover:text-black transition-all duration-500"
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
         transition={{

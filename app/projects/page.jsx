@@ -46,7 +46,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#000000] mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#ebcc34] mb-3">
             My Projects
           </h2>
           <div className="w-24 h-1 bg-[#ebcc34] mx-auto mb-6"></div>

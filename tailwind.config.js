@@ -39,10 +39,7 @@ module.exports = {
         orange:"#e43c08",
         blue:"4F6d7a",
         brown:"#964B00",
-        accent: {
-          DEFAULT: "#57ebd7",
-          hover: "#45bcac",
-        },
+        
       },
       keyframes: {
         "accordion-down": {

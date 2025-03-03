@@ -1,13 +1,11 @@
 "use client";
 import Tilt from "react-parallax-tilt";
-
 import { motion } from "framer-motion";
 // Use these imports instead of importing from "@/node_modules/react-icons/fa"
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { AiOutlineRobot } from "react-icons/ai";
 import { FaWordpress, FaFigma, FaMailchimp, FaMicrosoft } from "react-icons/fa";
 import { SiOpenai, SiAdobephotoshop, SiCanva, SiGoogleanalytics, SiTableau, SiHubspot, SiAdobeillustrator, SiMicrosoft } from "react-icons/si";
-
 
 // components
 import { ScrollArea } from "../../components/ui/scroll-area";
@@ -56,7 +54,7 @@ const about = {
 const skills = {
   title: "My skills",
   description:
-    "Driven by curiosity and perseverance, I'm a dedicated software developer who thrives on turning innovative ideas into real-world solutions. From crafting intuitive interfaces to architecting robust systems, I believe in the power of technology to empower users and spark positive change. Let's innovate together—shaping the future, one line of code at a time.",
+    "Driven by creativity and market insight, I'm a dedicated marketing strategist who thrives on turning innovative ideas into impactful brand experiences. From crafting compelling campaigns to architecting comprehensive digital strategies, I believe in the power of marketing to captivate audiences and drive measurable results. Let's innovate together—shaping the future of brands, one campaign at a time.",
   skillList: [
     { icon: <FaWordpress />, name: "WordPress", proficiency: 80 },
     { icon: <SiOpenai />, name: "OpenAI", proficiency: 65 },
@@ -72,6 +70,7 @@ const skills = {
     { icon: <SiAdobeillustrator />, name: "Illustrator", proficiency: 60 },
   ],
 };
+
 // experience data (unchanged)
 const experience = {
   icon: "/assets/about/badge.svg",
@@ -91,7 +90,6 @@ const experience = {
     },
   ],
 };
-
 
 // education data (unchanged)
 const education = {
@@ -124,31 +122,31 @@ const About = () => {
           <TabsList className="flex flex-col items-start w-full max-w-[200px] xl:mr-[40px] gap-6">
             <TabsTrigger
               value="about"
-              className="w-full min-h-[60px] flex items-center justify-center text-left text-lg font-medium text-white bg-secondary rounded-xl hover:bg-accent hover:text-black transition-all flex-none"
+              className="w-full min-h-[60px] flex items-center justify-center text-left text-lg font-medium text-black bg-[#ffc95f] border-2 border-[#ffc95f] rounded-xl hover:bg-[#ffb82e] hover:text-black transition-all flex-none"
             >
               About
             </TabsTrigger>
             <TabsTrigger
               value="skills"
-              className="w-full min-h-[60px] flex items-center justify-center text-left text-lg font-medium text-white bg-secondary rounded-xl hover:bg-accent hover:text-black transition-all flex-none"
+              className="w-full min-h-[60px] flex items-center justify-center text-left text-lg font-medium text-black bg-[#ffc95f] border-2 border-[#ffc95f] rounded-xl hover:bg-[#ffb82e] hover:text-black transition-all flex-none"
             >
               Skills
             </TabsTrigger>
             <TabsTrigger
               value="experience"
-              className="w-full min-h-[60px] flex items-center justify-center text-left text-lg font-medium text-white bg-secondary rounded-xl hover:bg-accent hover:text-black transition-all flex-none"
+              className="w-full min-h-[60px] flex items-center justify-center text-left text-lg font-medium text-black bg-[#ffc95f] border-2 border-[#ffc95f] rounded-xl hover:bg-[#ffb82e] hover:text-black transition-all flex-none"
             >
               Experience
             </TabsTrigger>
             <TabsTrigger
               value="education"
-              className="w-full min-h-[60px] flex items-center justify-center text-left text-lg font-medium text-white bg-secondary rounded-xl hover:bg-accent hover:text-black transition-all flex-none"
+              className="w-full min-h-[60px] flex items-center justify-center text-left text-lg font-medium text-black bg-[#ffc95f] border-2 border-[#ffc95f] rounded-xl hover:bg-[#ffb82e] hover:text-black transition-all flex-none"
             >
               Education
             </TabsTrigger>
           </TabsList>
 
-          {/* content */}
+          {/* Content */}
           <div className="w-full min-h-[25vh]">
             {/* About Tab */}
             <TabsContent value="about" className="w-full">
@@ -163,52 +161,18 @@ const About = () => {
                       {about.info.map((item, index) => (
                         <li
                           key={index}
-                          className="bg-secondary h-[100px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start"
+                          className="bg-[#ffc95f] h-[100px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start"
                         >
-                          <span className="text-accent uppercase">
+                          <span className="text-black font-medium uppercase">
                             {item.fieldName}
                           </span>
-                          <h3 className="text-base uppercase text-white/80">
+                          <h3 className="text-base uppercase text-black/80">
                             {item.fieldValue}
                           </h3>
                         </li>
                       ))}
                     </ul>
                   </ScrollArea>
-                </div>
-              </div>
-            </TabsContent>
-
-            {/* Experience Tab */}
-            <TabsContent value="experience" className="w-full">
-              <div className="pt-2">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <div className="flex flex-col gap-2">
-                    <h4 className="h3">{experience.title}</h4>
-                    <p className="p">{experience.description}</p>
-                  </div>
-                  <ul className="flex flex-col gap-6">
-                    {experience.items.map((item, index) => (
-                      <li
-                        key={index}
-                        className="relative bg-secondary rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-full md:w-[800px]"
-                      >
-                        <div className="flex flex-col gap-3">
-                          <div className="flex justify-between items-center">
-                            <h4 className="text-[16px] font-bold text-white leading-tight">
-                              {item.position}
-                            </h4>
-                            <span className="text-sm text-white/60">
-                              {item.duration}
-                            </span>
-                          </div>
-                          <p className="text-sm text-white/80">
-                            {item.description}
-                          </p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             </TabsContent>
@@ -225,14 +189,48 @@ const About = () => {
                     {skills.skillList.map((skill, index) => (
                       <li
                         key={index}
-                        className="relative group w-full h-[150px] bg-secondary rounded-xl flex flex-col justify-center items-center overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+                        className="relative group w-full h-[150px] bg-[#ffc95f] border-2 border-[#ffc95f] rounded-xl flex flex-col justify-center items-center overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
                       >
-                        <div className="relative z-10 text-5xl group-hover:text-accent transition-all duration-300">
+                        <div className="relative z-10 text-5xl text-black group-hover:text-black/70 transition-all duration-300">
                           {skill.icon}
                         </div>
-                        <p className="text-sm mt-2 text-white/80 group-hover:text-white transition-all duration-300">
+                        <p className="text-sm mt-2 text-black/80 group-hover:text-black font-medium transition-all duration-300">
                           {skill.name}
                         </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </TabsContent>
+
+            {/* Experience Tab */}
+            <TabsContent value="experience" className="w-full">
+              <div className="pt-2">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <div className="flex flex-col gap-2">
+                    <h4 className="h3">{experience.title}</h4>
+                    <p className="p">{experience.description}</p>
+                  </div>
+                  <ul className="flex flex-col gap-6">
+                    {experience.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="relative bg-[#ffc95f] rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 w-full md:w-[800px]"
+                      >
+                        <div className="flex flex-col gap-3">
+                          <div className="flex justify-between items-center">
+                            <h4 className="text-[16px] font-bold text-black leading-tight">
+                              {item.position}
+                            </h4>
+                            <span className="text-sm text-black/70">
+                              {item.duration}
+                            </span>
+                          </div>
+                          <p className="text-sm text-black/80">
+                            {item.description}
+                          </p>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -252,16 +250,16 @@ const About = () => {
                     {education.items.map((item, index) => (
                       <li
                         key={index}
-                        className="relative bg-secondary rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+                        className="relative bg-[#ffc95f] border-2 border-[#ffc95f] rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
                       >
                         <div className="flex flex-col gap-2">
-                          <h4 className="text-lg font-bold text-white">
+                          <h4 className="text-lg font-bold text-black">
                             {item.institution}
                           </h4>
-                          <span className="text-sm text-white/60">
+                          <span className="text-sm text-black/70">
                             {item.duration}
                           </span>
-                          <p className="text-sm text-white/80">{item.degree}</p>
+                          <p className="text-sm text-black/80">{item.degree}</p>
                         </div>
                       </li>
                     ))}
