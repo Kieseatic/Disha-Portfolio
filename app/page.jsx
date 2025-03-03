@@ -49,13 +49,17 @@ const Home = () => {
               className="p text-white/80"
             >
               <p>
-                A Marketing & Communications Specialist with expertise in 
-                <span className="font-extrabold"> digital marketing, content creation, and brand management. </span>
+                A Marketing & Communications Specialist with expertise in
+                <span className="font-extrabold">
+                  {" "}
+                  digital marketing, content creation, and brand management.{" "}
+                </span>
                 Professional experience in social media strategy, eCommerce, and
-                analytics, driving engagement and brand growth. Skilled in <span className="font-extrabold">
-                Google Analytics, SEO, and cross-channel campaigns. 
-                </span> Passionate
-                about creating impactful marketing solutions.
+                analytics, driving engagement and brand growth. Skilled in{" "}
+                <span className="font-extrabold">
+                  Google Analytics, SEO, and cross-channel campaigns.
+                </span>{" "}
+                Passionate about creating impactful marketing solutions.
               </p>
             </motion.div>
             {/* take action */}
@@ -82,7 +86,7 @@ const Home = () => {
                 <Button
                   variant="outline"
                   size="md"
-                  className="uppercase flex items-center gap-2"
+                  className="uppercase flex items-center gap-2 border-[#ffc95f] text-[#ffc95f] hover:bg-[#ffc95f] hover:text-black"
                 >
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />

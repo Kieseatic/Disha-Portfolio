@@ -117,11 +117,11 @@ const response = await fetch("https://api.web3forms.com/submit", {
                 {info.map((item, index) => {
                   return (
                     <li key={index} className="flex items-center gap-6">
-                      <div className="w-12 h-12 bg-secondary text-accent rounded-full flex items-center justify-center">
+                      <div className="w-12 h-12 bg-secondary text-[#FFC95F] rounded-full flex items-center justify-center">
                         <div className="text-xl">{item.icon}</div>
                       </div>
                       <div className="flex-1">
-                        <p className="uppercase text-accent">{item.title}</p>
+                        <p className="uppercase text-[#FFC95F]">{item.title}</p>
                         <h3 className="text-base uppercase text-white/60">
                           {item.description}
                         </h3>
@@ -155,7 +155,7 @@ const response = await fetch("https://api.web3forms.com/submit", {
                 placeholder="Type your message here!"
                 required
               />
-              <Button type="submit" className="max-w-40 uppercase">
+              <Button type="submit" className="bg-[#FFC95F] max-w-40 uppercase">
                 Send email
               </Button>
             </form>
