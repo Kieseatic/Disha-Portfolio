@@ -13,7 +13,7 @@ const projects = [
     description:
       "Analyzed Aritzia's global marketing strategies. Proposed actionable solutions to expand its digital presence and influencer collaborations.",
     image: "/assets/projects/aritzia.jpeg",
-    live: null,
+    live: "/assets/projects/aritzia.pdf", 
     github: null,
   },
   {
