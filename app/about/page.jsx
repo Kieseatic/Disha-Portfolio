@@ -1,11 +1,14 @@
 "use client";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-// Use these imports instead of importing from "@/node_modules/react-icons/fa"
+// Icons
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { AiOutlineRobot } from "react-icons/ai";
-import { FaWordpress, FaFigma, FaMailchimp, FaMicrosoft } from "react-icons/fa";
-import { SiOpenai, SiAdobephotoshop, SiCanva, SiGoogleanalytics, SiTableau, SiHubspot, SiAdobeillustrator, SiMicrosoft } from "react-icons/si";
+import { FaWordpress, FaFigma, FaMailchimp, FaMicrosoft, FaInstagram, FaFacebook, FaGoogle, FaSearchengin, FaVideo } from "react-icons/fa";
+import { SiOpenai, SiAdobephotoshop, SiCanva, SiGoogleanalytics, SiTableau, SiHubspot, SiAdobeillustrator, SiMicrosoft, SiSalesforce, SiGoogleads } from "react-icons/si";
+import { MdCampaign, MdOutlineAnalytics, MdEmail, MdOutlineGroupWork } from "react-icons/md";
+import { BsGraphUp, BsCalendarCheck } from "react-icons/bs";
+import { TbSeo, TbReportAnalytics } from "react-icons/tb";
 
 // components
 import { ScrollArea } from "../../components/ui/scroll-area";
@@ -50,25 +53,81 @@ const about = {
   ],
 };
 
-// skills data
+// Updated skills data with tools integrated in categories
 const skills = {
   title: "My skills",
   description:
     "Driven by creativity and market insight, I'm a dedicated marketing strategist who thrives on turning innovative ideas into impactful brand experiences. From crafting compelling campaigns to architecting comprehensive digital strategies, I believe in the power of marketing to captivate audiences and drive measurable results. Let's innovate together—shaping the future of brands, one campaign at a time.",
-  skillList: [
-    { icon: <FaWordpress />, name: "WordPress", proficiency: 80 },
-    { icon: <SiOpenai />, name: "OpenAI", proficiency: 65 },
-    { icon: <GiArtificialIntelligence />, name: "AI", proficiency: 75 },
-    { icon: <SiAdobephotoshop />, name: "Photoshop", proficiency: 70 },
-    { icon: <SiCanva />, name: "Canva", proficiency: 85 },
-    { icon: <SiGoogleanalytics />, name: "Google Analytics", proficiency: 75 },
-    { icon: <SiTableau />, name: "Tableau", proficiency: 80 },
-    { icon: <FaFigma />, name: "Figma", proficiency: 65 },
-    { icon: <SiMicrosoft />, name: "Microsoft Office", proficiency: 90 },
-    { icon: <SiHubspot />, name: "HubSpot", proficiency: 70 },
-    { icon: <FaMailchimp />, name: "Mailchimp", proficiency: 75 },
-    { icon: <SiAdobeillustrator />, name: "Illustrator", proficiency: 60 },
-  ],
+  categories: [
+    {
+      name: "Digital Marketing & Demand Generation",
+      icon: <MdCampaign />,
+      skills: [
+        { name: "Multi-Channel Campaigns", icon: <BsGraphUp /> },
+        { name: "Lead Acquisition & Nurturing", icon: <SiHubspot /> },
+        { name: "Performance Analytics", icon: <SiGoogleanalytics /> },
+      ],
+      tools: [
+        { name: "HubSpot", icon: <SiHubspot /> },
+        { name: "Salesforce", icon: <SiSalesforce /> },
+        { name: "Google Analytics", icon: <SiGoogleanalytics /> },
+      ]
+    },
+    {
+      name: "Content Creation & Social Media",
+      icon: <FaInstagram />,
+      skills: [
+        { name: "High-Engagement Content", icon: <FaFacebook /> },
+        { name: "Community Engagement", icon: <MdOutlineGroupWork /> },
+        { name: "Graphic Design & Video Editing", icon: <SiCanva /> },
+      ],
+      tools: [
+        { name: "Instagram", icon: <FaInstagram /> },
+        { name: "Facebook", icon: <FaFacebook /> },
+        { name: "Canva", icon: <SiCanva /> },
+        { name: "Photoshop", icon: <SiAdobephotoshop /> },
+        { name: "CapCut", icon: <FaVideo /> },
+      ]
+    },
+    {
+      name: "Paid Advertising & SEO",
+      icon: <SiGoogleads />,
+      skills: [
+        { name: "Google Ads Campaigns", icon: <FaGoogle /> },
+        { name: "SEO & Keyword Research", icon: <TbSeo /> },
+        { name: "Ad Performance Tracking", icon: <MdOutlineAnalytics /> },
+      ],
+      tools: [
+        { name: "Google Ads", icon: <SiGoogleads /> },
+        { name: "SEO", icon: <FaSearchengin /> },
+      ]
+    },
+    {
+      name: "Data Analysis & Technical Proficiency",
+      icon: <TbReportAnalytics />,
+      skills: [
+        { name: "KPI Tracking & Reporting", icon: <SiTableau /> },
+        { name: "Marketing Automation", icon: <SiHubspot /> },
+        { name: "A/B Testing & Optimization", icon: <MdOutlineAnalytics /> },
+      ],
+      tools: [
+        { name: "Tableau", icon: <SiTableau /> },
+        { name: "Google Analytics", icon: <SiGoogleanalytics /> },
+      ]
+    },
+    {
+      name: "Project Management & Collaboration",
+      icon: <BsCalendarCheck />,
+      skills: [
+        { name: "Campaign Coordination", icon: <MdCampaign /> },
+        { name: "Team Leadership", icon: <MdOutlineGroupWork /> },
+        { name: "Content Management", icon: <FaMailchimp /> },
+      ],
+      tools: [
+        { name: "Microsoft Office", icon: <SiMicrosoft /> },
+      ]
+    },
+  ]
 };
 
 // experience data (unchanged)
@@ -177,7 +236,7 @@ const About = () => {
               </div>
             </TabsContent>
 
-            {/* Skills Tab */}
+            {/* Skills Tab - Updated with integrated tools */}
             <TabsContent value="skills" className="w-full">
               <div className="pt-2">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -185,21 +244,48 @@ const About = () => {
                     <h3 className="h3">{skills.title}</h3>
                     <p className="p">{skills.description}</p>
                   </div>
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                    {skills.skillList.map((skill, index) => (
-                      <li
-                        key={index}
-                        className="relative group w-full h-[150px] bg-[#ffc95f] border-2 border-[#ffc95f] rounded-xl flex flex-col justify-center items-center overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-                      >
-                        <div className="relative z-10 text-5xl text-black group-hover:text-black/70 transition-all duration-300">
-                          {skill.icon}
+                  
+                  <ScrollArea className="h-[400px]">
+                    <div className="grid grid-cols-1 gap-6">
+                      {skills.categories.map((category, index) => (
+                        <div key={index} className="bg-[#ffc95f] rounded-xl p-5 shadow-md">
+                          <div className="mb-4 flex items-center gap-2">
+                            <span className="text-2xl text-black">{category.icon}</span>
+                            <h4 className="font-bold text-black">{category.name}</h4>
+                          </div>
+                          
+                          {/* Skills */}
+                          <div className="mb-4">
+                            <h5 className="text-sm font-semibold text-black/80 mb-2">Key Competencies:</h5>
+                            <ul className="space-y-2 pl-2">
+                              {category.skills.map((skill, skillIndex) => (
+                                <li key={skillIndex} className="flex items-center gap-2">
+                                  <span className="text-black/80 text-lg">{skill.icon}</span>
+                                  <span className="text-sm text-black/80">{skill.name}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          {/* Tools */}
+                          <div>
+                            <h5 className="text-sm font-semibold text-black/80 mb-2">Tools & Platforms:</h5>
+                            <div className="flex flex-wrap gap-2">
+                              {category.tools.map((tool, toolIndex) => (
+                                <div 
+                                  key={toolIndex} 
+                                  className="bg-black/10 px-3 py-1 rounded-full flex items-center gap-1"
+                                >
+                                  <span className="text-black text-sm">{tool.icon}</span>
+                                  <span className="text-xs text-black/80">{tool.name}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
                         </div>
-                        <p className="text-sm mt-2 text-black/80 group-hover:text-black font-medium transition-all duration-300">
-                          {skill.name}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
+                      ))}
+                    </div>
+                  </ScrollArea>
                 </div>
               </div>
             </TabsContent>
