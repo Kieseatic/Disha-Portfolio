@@ -14,12 +14,12 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "+1 (416) 832-8955",
+    description: "",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "dishamgandhi.30@gmail.com",
+    description: "",
   },
   {
     icon: <FaMapMarkerAlt />,
