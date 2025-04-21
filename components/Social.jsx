@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const socials = [
   { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/disha-gandhi-619a12229/" },
   { icon: <FaInstagram />, path: "https://www.instagram.com/disha._gandhi/" },
-  { icon: <FaEnvelope />, path: "mailto:dishamgandhi.30@gmail.com" },
+  //{ icon: <FaEnvelope />, path: "mailto:dishamgandhi.30@gmail.com" },
 ];
 
 const Social = () => (

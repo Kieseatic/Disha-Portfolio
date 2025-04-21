@@ -34,14 +34,14 @@ const about = {
       fieldName: "Experience",
       fieldValue: "2+ Years",
     },
-    {
+    /*{
       fieldName: "Phone",
       fieldValue: "(+1) 416 832 8955",
     },
     {
       fieldName: "Email",
       fieldValue: "dishamgandhi.30@gmail.com",
-    },
+    },*/
     {
       fieldName: "Location",
       fieldValue: "Toronto, Ontario, Canada",
