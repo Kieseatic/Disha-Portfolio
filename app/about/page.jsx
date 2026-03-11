@@ -138,14 +138,24 @@ const experience = {
     "Creative and detail-oriented marketing professional with expertise in digital marketing, social media management, and brand building.",
   items: [
     {
-      position: "Marketing Intern at Ontario College of Management and Technology",
-      duration: "2024 - 2025",
+      position: "Marketing Intern - Events and Social Media at Re-defined",
+      duration: "December 2025 - Present",
       description: "Toronto, Ontario, Canada",
     },
     {
-      position: "Social Media Coordinator / Beauty Expert at Shoppers Drug Mart",
-      duration: "2023 - Present",
+      position: "Freelance Digital Creator at Instagram",
+      duration: "October 2023 - Present",
       description: "Toronto, Ontario, Canada",
+    },
+    {
+      position: "Marketing Intern at Insight Global Edtech Lab",
+      duration: "October 2024 - January 2025",
+      description: "Toronto, Ontario, Canada",
+    },
+    {
+      position: "Marketing Specialist at Myntra",
+      duration: "December 2021 - January 2023",
+      description: "Gujarat, India",
     },
   ],
 };
