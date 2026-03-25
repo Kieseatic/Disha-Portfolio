@@ -3,13 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiDownload, FiEye } from "react-icons/fi";
-import {
-  BsCalendarEvent,
-  BsTree,
-  BsPalette,
-  BsMegaphone,
-  BsFileEarmarkText,
-} from "react-icons/bs";
+import Image from "next/image";
 
 const graphics = [
   {
@@ -17,40 +11,35 @@ const graphics = [
     description:
       "A professionally designed event agenda template for organizing and presenting event schedules.",
     file: "/assets/Event Agenda.pdf",
-    icon: BsCalendarEvent,
-    gradient: "from-[#a855f7] to-[#6d28d9]",
+    thumbnail: "/assets/Thumbnail/Event agenda.png",
   },
   {
     title: "Outdoor Event",
     description:
       "A creative outdoor event template capturing the essence of open-air gatherings and activities.",
     file: "/assets/Outdoor Event.pdf",
-    icon: BsTree,
-    gradient: "from-[#22c55e] to-[#15803d]",
+    thumbnail: "/assets/Thumbnail/Outdoor events.png",
   },
   {
     title: "Random",
     description:
       "A versatile graphic design template showcasing creative layout and visual storytelling.",
     file: "/assets/Random.pdf",
-    icon: BsPalette,
-    gradient: "from-[#ec4899] to-[#be185d]",
+    thumbnail: "/assets/Thumbnail/More like this.png",
   },
   {
     title: "Speakers Agenda",
     description:
       "A structured speakers agenda template for managing speaker lineups and session details.",
     file: "/assets/Speakers Agenda.pdf",
-    icon: BsFileEarmarkText,
-    gradient: "from-[#3b82f6] to-[#1d4ed8]",
+    thumbnail: "/assets/Thumbnail/Speakers agenda.png",
   },
   {
     title: "Speakers Announcement",
     description:
       "A bold speakers announcement template designed to highlight and promote featured speakers.",
     file: "/assets/Speakers Announcement.pdf",
-    icon: BsMegaphone,
-    gradient: "from-[#f97316] to-[#c2410c]",
+    thumbnail: "/assets/Thumbnail/Speakers announcement.png",
   },
 ];
 
@@ -80,7 +69,6 @@ const Graphics = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {graphics.map((item, index) => {
-            const Icon = item.icon;
             const isHovered = hoveredIndex === index;
 
             return (
@@ -93,23 +81,18 @@ const Graphics = () => {
                 onMouseLeave={() => setHoveredIndex(null)}
                 className="group relative rounded-2xl overflow-hidden cursor-default"
               >
-                {/* Gradient top section */}
-                <div
-                  className={`relative h-52 bg-gradient-to-br ${item.gradient} flex items-center justify-center overflow-hidden`}
-                >
-                  {/* Background pattern */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-4 left-4 w-20 h-20 border-2 border-white rounded-full" />
-                    <div className="absolute bottom-4 right-4 w-32 h-32 border-2 border-white rounded-full" />
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 border border-white rounded-full" />
-                  </div>
-
-                  {/* Icon */}
-                  <Icon className="text-white text-7xl transition-all duration-500 group-hover:scale-125 group-hover:rotate-6 drop-shadow-lg" />
+                {/* Thumbnail */}
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={item.thumbnail}
+                    alt={item.title}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                  />
 
                   {/* Hover overlay with actions */}
                   <div
-                    className={`absolute inset-0 bg-black/50 flex items-center justify-center gap-4 transition-opacity duration-300 ${
+                    className={`absolute inset-0 bg-black/60 flex items-center justify-center gap-4 transition-opacity duration-300 ${
                       isHovered ? "opacity-100" : "opacity-0"
                     }`}
                   >
